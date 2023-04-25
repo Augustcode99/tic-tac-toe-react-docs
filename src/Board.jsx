@@ -1,4 +1,3 @@
-import "./Board.css";
 import Square from "./Square.jsx";
 import { useState } from "react";
 
