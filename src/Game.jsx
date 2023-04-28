@@ -4,10 +4,10 @@ import Board from "./Board.jsx";
 const Game = () => {
   return (
     <>
-      <div className="game-board">
+      <div className="board">
         <Board />
       </div>
-      <div className="game-info">
+      <div className="info">
         <ol></ol>
       </div>
     </>
