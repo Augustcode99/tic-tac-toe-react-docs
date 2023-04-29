@@ -1,8 +1,6 @@
 import Square from "./Square.jsx";
 
 function Board({ xIsNext, squares, onPlay }) {
-  // const [squares, setSquares] = useState(Array(9).fill(null));
-
   const handleClick = (i) => {
     if (squares[i] || calculateWinner(squares)) {
       return;
@@ -14,8 +12,6 @@ function Board({ xIsNext, squares, onPlay }) {
       newSquares[i] = "O";
     }
     onPlay(newSquares);
-    // setXIsNext(!xIsNext);
-    // setSquares(newSquares);
   };
   const calculateWinner = (squares) => {
     const lines = [
@@ -44,7 +40,7 @@ function Board({ xIsNext, squares, onPlay }) {
   const winner = calculateWinner(squares);
 
   if (winner) {
-    status = `The winner is ${winner}`;
+    status = `WINNER: ${winner}`;
   } else {
     status = `${xIsNext ? "X" : "O"}'s turn`;
   }
