@@ -7,8 +7,8 @@ const Game = () => {
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const currentSquares = history[history.length - 1];
 
-  const handlePlay = (nextSquares) => {
-    setHistory([...history, nextSquares]);
+  const handlePlay = (newSquares) => {
+    setHistory([...history, newSquares]);
     setXIsNext(!xIsNext);
   };
 
@@ -22,7 +22,7 @@ const Game = () => {
       description = `Go to game start`;
     }
     return (
-      <li>
+      <li key={move}>
         <button onClick={() => jumpTo(move)}>{description}</button>
       </li>
     );
